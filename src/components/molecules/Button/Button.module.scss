@@ -1,0 +1,45 @@
+@use "../../../style/variables" as variables;
+@use "../../../style/mixins" as mixins;
+
+.button {
+  @include mixins.button-styles;
+
+  &.primary {
+    background-color: map-get(variables.$button-colors, "primary-idle");
+    color: map-get(variables.$colors, "white");
+
+    &:hover {
+      background-color: map-get(variables.$button-colors, "primary-hover");
+    }
+  }
+
+  &.secondary {
+    background-color: map-get(variables.$button-colors, "secondary-idle");
+    color: map-get(variables.$colors, "main-purple");
+
+    &:hover {
+      background-color: map-get(variables.$button-colors, "secondary-hover");
+    }
+  }
+
+  &.destructive {
+    background-color: map-get(variables.$button-colors, "destructive-idle");
+    color: map-get(variables.$colors, "white");
+
+    &:hover {
+      background-color: map-get(variables.$button-colors, "destructive-hover");
+    }
+  }
+
+  &.L {
+    width: 255px;
+    height: 48px;
+    font-size: 15px;
+  }
+
+  &.S {
+    width: 255px;
+    height: 40px;
+    font-size: 13px;
+  }
+}

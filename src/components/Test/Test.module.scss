@@ -1,0 +1,18 @@
+@use "../../style/breakpoints" as breakpoints;
+@use "../../style/typography" as typography;
+
+.test {
+  //   h1 {
+  //     @include typography.heading-l;
+  //     @include breakpoints.md {
+  //       @include typography.heading-xl;
+  //     }
+  //     @include breakpoints.lg {
+  //       @include typography.heading-xxl;
+  //     }
+  //   }
+
+  // h1 {
+  //   background-color: blue;
+  // }
+}

@@ -1,0 +1,23 @@
+$colors: (
+  "main-purple": hsla(242, 48%, 58%, 1),
+  "main-purple-hover": hsla(242, 100%, 82%, 1),
+  "black": hsla(237, 100%, 4%, 1),
+  "very-dark-grey": hsla(235, 16%, 15%, 1),
+  "dark-grey": hsla(235, 12%, 19%, 1),
+  "lines-dark": hsla(235, 12%, 27%, 1),
+  "medium-grey": hsla(216, 15%, 57%, 1),
+  "lines-light": hsla(221, 69%, 94%, 1),
+  "light-grey": hsla(220, 69%, 97%, 1),
+  "white": hsla(0, 0%, 100%, 1),
+  "red": hsla(0, 78%, 63%, 1),
+  "red-hover": hsla(0, 100%, 80%, 1),
+);
+
+$button-colors: (
+  "primary-idle": hsla(242, 48%, 58%, 1),
+  "secondary-idle": hsla(242, 48%, 58%, 0.1),
+  "destructive-idle": hsla(0, 78%, 63%, 1),
+  "primary-hover": hsla(242, 100%, 82%, 1),
+  "secondary-hover": hsla(242, 48%, 58%, 0.25),
+  "destructive-hover": hsla(0, 100%, 80%, 1),
+);
