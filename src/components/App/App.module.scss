@@ -2,6 +2,9 @@
 @use "../../style/typography" as typography;
 
 .app {
+  display: flex;
+  flex-direction: column;
+
   .button {
     border: none;
     background: transparent;

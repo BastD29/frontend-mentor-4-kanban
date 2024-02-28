@@ -21,3 +21,9 @@ $button-colors: (
   "secondary-hover": hsla(242, 48%, 58%, 0.25),
   "destructive-hover": hsla(0, 100%, 80%, 1),
 );
+
+$checkbox-colors: (
+  "idle": hsla(220, 69%, 97%, 1),
+  // "hovered": hsla(242, 48%, 58%, 1),
+  "hovered": hsla(242, 48%, 58%, 0.25),
+);

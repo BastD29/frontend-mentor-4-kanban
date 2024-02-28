@@ -1,0 +1,51 @@
+@use "../../../style/variables" as variables;
+@use "../../../style/mixins" as mixins;
+
+.checkbox-wrapper {
+  border-radius: 4px;
+  padding: 12px;
+  width: 295px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  background-color: var(--checkbox-background-color);
+
+  &:hover {
+    background-color: map-get(variables.$checkbox-colors, "hovered");
+  }
+
+  input {
+    appearance: none;
+    margin-right: 16px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    border: 1px solid rgba(130, 143, 163, 0.25);
+    background: map-get(variables.$colors, "white");
+
+    &:checked {
+      background: map-get(variables.$colors, "main-purple");
+    }
+
+    &:checked::after {
+      content: url("../../../../assets/icon-check.svg");
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  label {
+    @include mixins.checkbox-label-styles;
+
+    color: var(--checkbox-color);
+
+    &.checked {
+      text-decoration-line: line-through;
+      opacity: 0.5;
+    }
+  }
+}

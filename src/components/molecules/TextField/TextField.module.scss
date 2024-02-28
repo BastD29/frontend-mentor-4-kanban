@@ -1,0 +1,49 @@
+@use "../../../style/variables" as variables;
+@use "../../../style/mixins" as mixins;
+
+.text-field {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 8px;
+
+  label {
+    @include mixins.text-field-label;
+  }
+
+  .input-wrapper {
+    width: 350px;
+    height: 40px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(130, 143, 163, 0.25);
+    background: map-get(variables.$colors, "white");
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    input {
+      @include mixins.text-field-input;
+      outline: none;
+      border: none;
+      // opacity: 0.25;
+      // width: fit-content;
+    }
+
+    input::placeholder {
+      @include mixins.text-field-input-placeholder;
+      opacity: 0.25;
+    }
+
+    .error-message {
+      @include mixins.text-field-input-error-message;
+    }
+
+    &.error {
+      border-radius: 4px;
+      border: 1px solid var(--Red, #ea5555);
+      //   background: var(--White, #fff);
+    }
+  }
+}

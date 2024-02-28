@@ -1,0 +1,11 @@
+@use "./variables" as variables;
+
+.light {
+  --checkbox-background-color: #{map-get(variables.$colors, "light-grey")};
+  --checkbox-color: #{map-get(variables.$colors, "black")};
+}
+
+.dark {
+  --checkbox-background-color: #{map-get(variables.$colors, "very-dark-grey")};
+  --checkbox-color: #{map-get(variables.$colors, "white")};
+}

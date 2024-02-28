@@ -1,3 +1,6 @@
+@use "./typography" as typography;
+@use "./variables" as variables;
+
 @mixin button-styles {
   border: none;
   cursor: pointer;
@@ -7,8 +10,68 @@
   // Typo
 
   text-align: center;
-  font-family: "Plus Jakarta Sans";
+  font-family: typography.$font-family;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+@mixin checkbox-label-styles {
+  // color: map-get(variables.$colors, "black");
+  font-family: typography.$font-family;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+}
+
+@mixin text-field-label {
+  // color: var(--Medium-Grey, #828fa3);
+  color: map-get(variables.$colors, "medium-grey");
+  font-family: typography.$font-family;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin text-field-input {
+  // color: var(--Black, #000112);
+  color: map-get(variables.$colors, "black");
+  // font-feature-settings: "clig" off, "liga" off;
+
+  /* Body (L) */
+  font-family: typography.$font-family;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px;
+}
+
+@mixin text-field-input-placeholder {
+  // color: var(--Black, #000112);
+  // font-feature-settings: "clig" off, "liga" off;
+  color: map-get(variables.$colors, "black");
+
+  /* Body (L) */
+  font-family: typography.$font-family;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px;
+}
+
+@mixin text-field-input-error-message {
+  // color: var(--Red, #ea5555);
+  color: map-get(variables.$colors, "red");
+  text-align: right;
+  // font-feature-settings: "clig" off, "liga" off;
+
+  /* Body (L) */
+  font-family: typography.$font-family;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px;
 }
