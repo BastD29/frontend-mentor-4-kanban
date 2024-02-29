@@ -75,3 +75,39 @@
   font-weight: 500;
   line-height: 23px;
 }
+
+@mixin dropdown-label {
+  // color: var(--Medium-Grey, #828fa3);
+  color: map-get(variables.$colors, "medium-grey");
+  font-family: typography.$font-family;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin dropdown-select {
+  // color: var(--Black, #000112);
+  color: map-get(variables.$colors, "black");
+  // font-feature-settings: "clig" off, "liga" off;
+
+  /* Body (L) */
+  font-family: typography.$font-family;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px;
+}
+
+@mixin dropdown-option {
+  // color: var(--Medium-Grey, #828fa3);
+  color: map-get(variables.$colors, "medium-grey");
+  // font-feature-settings: "clig" off, "liga" off;
+
+  /* Body (L) */
+  font-family: typography.$font-family;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px;
+}

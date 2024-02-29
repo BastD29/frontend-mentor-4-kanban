@@ -6,13 +6,20 @@ import Button from "../atoms/Button/Button";
 import SubtaskCheckbox from "../atoms/Checkbox/SubtaskCheckbox";
 import SwitchButton from "../molecules/SwitchButton/SwitchButton";
 import TextField from "../molecules/TextField/TextField";
+import Dropdown, { Option } from "../molecules/Dropdown/Dropdown2";
 
 import { useTheme } from "../../hooks/useTheme";
+
+import { options } from "../../constants/options";
 
 // import styles from "./App.module.scss";
 
 const App: FC = () => {
   const { theme } = useTheme();
+
+  const handleSelect = (option: Option) => {
+    console.log("Selected:", option);
+  };
 
   return (
     // <div className={styles["app"]}>
@@ -36,6 +43,8 @@ const App: FC = () => {
       <SwitchButton />
 
       <TextField placeholder="Enter task name" label="Text field" />
+
+      <Dropdown onSelect={handleSelect} options={options} label="Dropdown" />
     </div>
   );
 };
