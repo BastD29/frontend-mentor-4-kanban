@@ -7,6 +7,11 @@
 
   // dropdown
   --options-list-background-color: #{map-get(variables.$colors, "white")};
+
+  // header
+  --header-background-color: #{map-get(variables.$colors, "white")};
+  --header-title-color: #{map-get(variables.$colors, "black")};
+  --header-logo: #{map-get(variables.$header-logos, "light")};
 }
 
 .dark {
@@ -19,4 +24,9 @@
       variables.$colors,
       "very-dark-grey"
     )};
+
+  // header
+  --header-background-color: #{map-get(variables.$colors, "dark-grey")};
+  --header-title-color: #{map-get(variables.$colors, "white")};
+  --header-logo: #{map-get(variables.$header-logos, "dark")};
 }

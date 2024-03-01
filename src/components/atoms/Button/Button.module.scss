@@ -32,13 +32,15 @@
   }
 
   &.L {
-    width: 255px;
-    height: 48px;
+    // width: 255px;
+    // width: fit-content;
+    // display: block;
+    // height: 48px;
     font-size: 15px;
   }
 
   &.S {
-    width: 255px;
+    // width: 255px;
     height: 40px;
     font-size: 13px;
   }

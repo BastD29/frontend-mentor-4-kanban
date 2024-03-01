@@ -1,28 +1,19 @@
-@use "../../style/breakpoints" as breakpoints;
-@use "../../style/typography" as typography;
+// @use "../../style/breakpoints" as breakpoints;
+// @use "../../style/typography" as typography;
 
-.app {
-  display: flex;
-  flex-direction: column;
+// .app {
+//   display: flex;
+//   flex-direction: column;
 
-  .button {
-    border: none;
-    background: transparent;
-    background-color: red;
-    width: 100px;
-    height: 20px;
-    color: white;
-  }
+//   h1 {
+//     @include typography.heading-l;
 
-  h1 {
-    @include typography.heading-l;
+//     @include breakpoints.md {
+//       @include typography.heading-xl;
+//     }
 
-    @include breakpoints.md {
-      @include typography.heading-xl;
-    }
-
-    @include breakpoints.lg {
-      @include typography.heading-xxl;
-    }
-  }
-}
+//     @include breakpoints.lg {
+//       @include typography.heading-xxl;
+//     }
+//   }
+// }

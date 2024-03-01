@@ -1,6 +1,6 @@
-import { ChangeEvent, FC, useState } from "react";
+import { FC, useRef, useState } from "react";
 
-import { options } from "../../../constants/options";
+import useOutsideClick from "../../../hooks/useOutsideClick";
 
 import styles from "./Dropdown.module.scss";
 
@@ -16,48 +16,45 @@ type DropdownProps = {
   onSelect: (option: Option) => void;
 };
 
-const Dropdown: FC<DropdownProps> = ({ label, id, onSelect }) => {
-  const [selectedValue, setSelectedValue] = useState(options[0].value);
-  //   const [selectedValue, setSelectedValue] = useState(undefined);
+const Dropdown: FC<DropdownProps> = ({ label, id, onSelect, options }) => {
+  const [selectedOption, setSelectedOption] = useState<Option>(options[0]);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
-    const value = event.target.value;
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-    const selectedOption = options.find(
-      (option) => option.value.toString() === value
-    );
-
-    setSelectedValue(value);
-
-    if (selectedOption) {
-      onSelect(selectedOption);
-    }
+  const handleOptionClick = (option: Option) => {
+    setSelectedOption(option);
+    onSelect(option);
+    setIsOpen(false);
   };
 
+  useOutsideClick(dropdownRef, () => {
+    if (isOpen) setIsOpen(false);
+  });
+
   return (
-    <div className={styles["dropdown"]}>
+    <div ref={dropdownRef} className={styles["dropdown"]}>
       {label && (
         <label htmlFor={id} className={styles["label"]}>
           {label}
         </label>
       )}
-      <select
-        // name=""
-        // id=""
-        className={styles["select"]}
-        value={selectedValue}
-        onChange={handleChange}
-      >
-        {options.map((option) => (
-          <option
-            key={option.value}
-            value={option.value}
-            className={styles["option"]}
-          >
-            {option.label}
-          </option>
-        ))}
-      </select>
+      <div className={styles["select"]} onClick={() => setIsOpen(!isOpen)}>
+        {selectedOption.label}
+      </div>
+      {isOpen && (
+        <div className={styles["options-list"]}>
+          {options.map((option) => (
+            <div
+              key={option.value}
+              className={styles["option"]}
+              onClick={() => handleOptionClick(option)}
+            >
+              {option.label}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
