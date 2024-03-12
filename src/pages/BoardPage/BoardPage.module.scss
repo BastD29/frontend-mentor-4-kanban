@@ -1,0 +1,17 @@
+@use "../../style/variables" as variables;
+
+.board-page {
+  // background-color: map-get(variables.$colors, "light-grey");
+  background-color: var(--board-background-color);
+  padding: 16px;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    display: block;
+    color: map-get(variables.$colors, "medium-grey");
+  }
+}

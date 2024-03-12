@@ -110,3 +110,51 @@
   font-weight: 500;
   line-height: 23px;
 }
+
+@mixin boards-list-h2 {
+  color: map-get(variables.$colors, "medium-grey");
+  font-family: typography.$font-family;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+@mixin board-item-h3 {
+  // color: map-get(variables.$colors, "medium-grey");
+  // font-feature-settings: "clig" off, "liga" off;
+
+  /* Heading (M) */
+  font-family: typography.$font-family;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin boards-list-button {
+  color: map-get(variables.$colors, "main-purple");
+  background-color: transparent;
+
+  /* Heading (M) */
+  font-family: typography.$font-family;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin hide-sidebar-button {
+  color: map-get(variables.$colors, "medium-grey");
+  // font-feature-settings: "clig" off, "liga" off;
+
+  /* Heading (M) */
+  font-family: typography.$font-family;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background-color: transparent;
+}

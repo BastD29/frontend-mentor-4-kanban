@@ -1,0 +1,17 @@
+.empty-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 25px;
+
+  h1 {
+    text-align: center;
+  }
+
+  button {
+    height: 48px;
+    width: 174px;
+    border-radius: 24px;
+  }
+}

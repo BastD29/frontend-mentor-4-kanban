@@ -9,8 +9,11 @@
 
   background-color: var(--header-background-color);
 
+  position: relative;
+  z-index: 2;
+
   @include breakpoints.md {
-    border-bottom: solid 1px rgba(228, 235, 250, 1);
+    border-bottom: solid 1px var(--header-borders);
   }
 
   .left {
@@ -22,6 +25,7 @@
       display: flex;
       align-items: center;
       padding: 16px;
+      // width: 250px;
 
       &::after {
         content: url("../../../../assets/logo-mobile.svg");
@@ -32,8 +36,9 @@
       }
 
       @include breakpoints.md {
-        border-right: solid 1px rgba(228, 235, 250, 1);
+        border-right: solid 1px var(--header-borders);
         padding-inline: 24px;
+        width: 250px;
       }
     }
 
@@ -41,18 +46,27 @@
       padding: 20px 0;
       color: var(--header-title-color);
 
-      &::after {
-        content: url("../../../../assets/icon-chevron-down.svg");
-        margin-left: 8px;
-        cursor: pointer;
+      // &::after {
+      //   content: url("../../../../assets/icon-chevron-down.svg");
+      //   margin-left: 8px;
+      //   cursor: pointer;
 
-        @include breakpoints.md {
-          display: none;
-        }
-      }
+      //   @include breakpoints.md {
+      //     display: none;
+      //   }
+      // }
 
       @include breakpoints.md {
         padding-left: 24px;
+      }
+    }
+
+    button {
+      background-color: transparent;
+      margin-left: 9px;
+
+      @include breakpoints.md {
+        display: none;
       }
     }
   }

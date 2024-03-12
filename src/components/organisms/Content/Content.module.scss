@@ -1,0 +1,29 @@
+@use "../../../style/variables" as variables;
+@use "../../../style/breakpoints" as breakpoints;
+
+.content {
+  transition: margin-left 0.3s ease;
+  height: 100vh;
+
+  .show-sidebar-btn {
+    display: none;
+
+    @include breakpoints.md {
+      display: block;
+      background-color: map-get(variables.$colors, "main-purple");
+      width: 56px;
+      height: 48px;
+      flex-shrink: 0;
+      border-radius: 0px 100px 100px 0px;
+      margin-bottom: 32px;
+
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.push {
+  margin-left: 250px;
+}

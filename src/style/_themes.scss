@@ -12,6 +12,20 @@
   --header-background-color: #{map-get(variables.$colors, "white")};
   --header-title-color: #{map-get(variables.$colors, "black")};
   --header-logo: #{map-get(variables.$header-logos, "light")};
+  --header-borders: #{map-get(variables.$colors, "lines-light")};
+
+  // board
+  --board-background-color: #{map-get(variables.$colors, "light-grey")};
+
+  // theme switcher
+  --theme-switcher-background-color: #{map-get(variables.$colors, "light-grey")};
+
+  // modal
+  --modal-background-color: #{map-get(variables.$colors, "white")};
+
+  // sidebar
+  --sidebar-background-color: #{map-get(variables.$colors, "white")};
+  --sidebar-border: #{map-get(variables.$colors, "lines-light")};
 }
 
 .dark {
@@ -29,4 +43,21 @@
   --header-background-color: #{map-get(variables.$colors, "dark-grey")};
   --header-title-color: #{map-get(variables.$colors, "white")};
   --header-logo: #{map-get(variables.$header-logos, "dark")};
+  --header-borders: #{map-get(variables.$colors, "lines-dark")};
+
+  // board
+  --board-background-color: #{map-get(variables.$colors, "very-dark-grey")};
+
+  // theme switcher
+  --theme-switcher-background-color: #{map-get(
+      variables.$colors,
+      "very-dark-grey"
+    )};
+
+  // modal
+  --modal-background-color: #{map-get(variables.$colors, "dark-grey")};
+
+  // sidebar
+  --sidebar-background-color: #{map-get(variables.$colors, "dark-grey")};
+  --sidebar-border: #{map-get(variables.$colors, "lines-dark")};
 }

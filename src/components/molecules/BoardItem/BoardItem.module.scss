@@ -1,0 +1,41 @@
+@use "../../../style/mixins" as mixins;
+@use "../../../style/variables" as variables;
+
+.board-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding-left: 8px;
+
+  cursor: pointer;
+  height: 48px;
+  border-radius: 0 100px 100px 0;
+
+  h3 {
+    @include mixins.board-item-h3;
+
+    margin-left: 12px;
+    color: map-get(variables.$colors, "medium-grey");
+  }
+
+  &--selected {
+    background-color: map-get(variables.$colors, "main-purple");
+    margin-right: 8px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: map-get(variables.$colors, "main-purple");
+      width: 16px;
+      height: 48px;
+      top: 0;
+      left: -16px;
+    }
+
+    h3 {
+      color: map-get(variables.$colors, "white");
+    }
+  }
+}
