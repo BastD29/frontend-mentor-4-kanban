@@ -1,0 +1,50 @@
+@use "../../../../style/mixins" as mixins;
+@use "../../../../style/typography" as typography;
+@use "../../../../style/breakpoints" as breakpoints;
+@use "../../../../style/variables" as variables;
+
+.delete-modal {
+  padding: 24px;
+  //   border: solid 1px black;
+  max-width: 480px;
+  background-color: var(--delete-modal-background-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  //   align-items: center;
+  grid-gap: 24px;
+
+  @include breakpoints.md {
+    padding: 32px;
+  }
+
+  h1 {
+    @include mixins.delete-modal;
+  }
+
+  p {
+    @include typography.body-l;
+    color: map-get(variables.$colors, "medium-grey");
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+
+    @include breakpoints.md {
+      flex-direction: row;
+      align-items: center;
+      //   justify-content: space-between;
+    }
+
+    button {
+      height: 40px;
+
+      @include breakpoints.md {
+        width: 200px;
+      }
+    }
+  }
+}

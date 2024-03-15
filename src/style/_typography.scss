@@ -17,7 +17,7 @@ $font-size-body-m: $base-font-size * 0.75;
 $line-height-body-l: 23px;
 $line-height-body-m: 15px;
 
-.body-l {
+@mixin body-l {
   font-family: $font-family;
   font-size: $font-size-body-l;
   line-height: $line-height-body-l;
@@ -25,7 +25,7 @@ $line-height-body-m: 15px;
   font-weight: 500;
 }
 
-.body-m {
+@mixin body-m {
   font-family: $font-family;
   font-size: $font-size-body-m;
   line-height: $line-height-body-m;

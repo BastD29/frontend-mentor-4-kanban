@@ -26,6 +26,9 @@
   // sidebar
   --sidebar-background-color: #{map-get(variables.$colors, "white")};
   --sidebar-border: #{map-get(variables.$colors, "lines-light")};
+
+  // delete modal
+  --delete-modal-background-color: #{map-get(variables.$colors, "white")};
 }
 
 .dark {
@@ -60,4 +63,7 @@
   // sidebar
   --sidebar-background-color: #{map-get(variables.$colors, "dark-grey")};
   --sidebar-border: #{map-get(variables.$colors, "lines-dark")};
+
+  // delete modal
+  --delete-modal-background-color: #{map-get(variables.$colors, "dark-grey")};
 }
